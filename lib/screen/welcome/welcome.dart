@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
-
-void main() => runApp(Welcome());
+import 'package:sales_shoes/helpers/colors.dart';
 
 class Welcome extends StatelessWidget {
+  //const Welcome({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome'),
-        ),
-        body: Center(
-          child: Container(
-            child: Text('Bienvenido'),
-          ),
-        ),
+    return Scaffold(
+      body: Container(
+                
+        child: Stack(children: [
+           Positioned.fill(child: Image.asset('img/zapatos_1.jpg', fit: BoxFit.cover,)
+           ),   
+        Center(child: Text('welcome'))
+      ],
+      )
       ),
     );
   }

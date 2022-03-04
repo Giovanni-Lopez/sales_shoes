@@ -1,24 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:sales_shoes/helpers/colors.dart';
+import 'package:sales_shoes/utils/rowPrueba.dart';
 
-void main() => runApp(Splash());
+class SplashScreen extends StatelessWidget {
+  //const SplashScreen({Key? key}) : super(key: key);
+  int duration = 0;
+  Widget gotopage;
 
-class Splash extends StatelessWidget {
+SplashScreen({required this.duration, required this.gotopage});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          
-          title: Text('Splash'),
+
+  Future.delayed(
+    Duration(seconds: duration),(){ 
+
+      Navigator.push(context, MaterialPageRoute(builder: (context) => gotopage));
+
+    }
+);
+
+  
+    return Scaffold(
+      body: Container(
+        color: ColorsApp.MAIN_COLOR,
+        child : Center(
+          child:
+         Icon(Icons.person, size: 70,)          
         ),
-        body: Center(
-          child: Container(
-            child: Text('Splash'),
-          ),
-        ),
-      ),
+      )
     );
   }
 }
