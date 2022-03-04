@@ -14,3 +14,8 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
+para cambiar el nombre de package se debe de utilizar la dependencia ----> change_app_package_name: ^0.1.2 y luego ejecutar este comando ----> flutter pub run change_app_package_name:main com.mitiendasv.carritodecomprasdezapatos
+
+flutter pub run change_app_package_name:main com.new.package.name
